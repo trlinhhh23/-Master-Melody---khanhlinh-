@@ -1,0 +1,28 @@
+body {
+    background-image: url('background-guide.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 99%;
+    height: 90vh;
+  }
+
+  .popup-menu {
+    position: absolute;
+    top: 14vh;
+    left: 20vw;
+    transform: translate(0%,0%);
+    width: 50vw;
+    height: 0;
+    background-color: black;
+    border-radius: 5rem;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 9999;
+  }
+  /*
+  .popup-menu:hover {
+    border: solid 0.25vw white;
+    transition: border 0.75s ease-in-out;}
+  */

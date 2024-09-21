@@ -1,0 +1,151 @@
+body {
+  background-image: url('onlybackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 66.67vh; 
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ 
+}
+.notes {
+  flex-basis: 60vh;
+}
+
+
+img {
+  width: 100%;
+  height: 40 vh;
+  object-fit: cover;
+  position: absolute;
+  bottom: -160px;
+  left: -1px;
+
+}
+
+.gif {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: blink 1.5s steps(1, end) infinite;
+  z-index: 1;
+}
+
+    @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    }
+
+ .piano {
+      border-radius: 20px;
+      flex-basis: 40vh;
+      z-index: 3;
+ }
+ .piano-keys {
+  display: flex;
+  list-style: none;
+  width: 100vw;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+.piano-keys .black {
+  z-index: 2;
+  width: 44px;
+  height: 140px;
+  margin: 0 -22px 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+.piano-keys .black.active {
+  box-shadow: inset -5px -10px 10px rgba(255,255,255,0.1);
+  background:linear-gradient(to bottom, #000, #434343);
+}
+.piano-keys .white {
+  height: 100%;
+  width: 10vw;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+  background:linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+.piano-keys .key span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #A2A2A2;
+  font-size: 1.13rem;
+  text-align: center;
+}
+.piano-keys .black span {
+  bottom: 13px;
+  color: #888888;
+}
+
+.product-image {
+  /* Tùy chỉnh kiểu dáng cho thẻ .product-image */
+  width: 100%; /* Chiếm toàn bộ chiều rộng của thẻ cha */
+  height: 200px; /* Chiều cao của hình ảnh */
+  object-fit: cover; /* Bao phủ toàn bộ vùng chứa */
+  border-radius: 5px; /* Bo tròn góc */
+}
+
+
+.singer {
+  transform: scaleX(-1);
+  z-index: 2;
+  height: 15vh;
+  width: auto;
+  top: 170px;
+}
+
+.backNote {
+  position: relative;
+  z-index: 1;
+  height: 20vh;
+  width: auto;
+  transform: rotate(10deg);
+  left: 15px;
+}
+.girlNote {
+  position: absolute;
+  top: 175px;
+  display: none;
+}
+
+.finishButton {
+  position: absolute;
+  z-index: 3;
+  top: 5px;
+  right: 5px;
+  width: 10vw;
+}
