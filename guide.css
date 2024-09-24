@@ -26,3 +26,11 @@ body {
     border: solid 0.25vw white;
     transition: border 0.75s ease-in-out;}
   */
+
+  .finishButton {
+    position: absolute;
+    z-index: 3;
+    top: 5px;
+    right: 5px;
+    width: 10vw;
+  }
